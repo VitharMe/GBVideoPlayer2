@@ -38,7 +38,8 @@ tar zxvf rgbds-0.3.7.tar.gz && cd rgbds-0.3.7 && make && make install
 ## Docker
 ```bash
 docker run --rm \
-	-e TIME="00:00:00" \ 
+	-e START="00:00:00" \ 
+	-e DURATION="00:00:30" \
 	-e NAME=video \
 	-v `pwd`/video.mp4:/GBVideoPlayer2/video.mp4 \
 	-v `pwd`/output/:/GBVideoPlayer2/video \
