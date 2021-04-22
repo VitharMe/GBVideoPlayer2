@@ -11,10 +11,11 @@ RUN apt-get update && apt-get upgrade -y && DEBIAN_FRONTEND="noninteractive" apt
     wget \
     libpng-dev \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
-RUN git clone https://github.com/LIJI32/GBVideoPlayer2
-RUN wget https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-3.4.2-64bit-static.tar.xz
-RUN tar xvf ffmpeg-3.4.2-64bit-static.tar.xz && cp ffmpeg-3.4.2-64bit-static/ffmpeg /usr/local/bin/
-RUN wget https://github.com/gbdev/rgbds/releases/download/v0.3.7/rgbds-0.3.7.tar.gz
+RUN git clone https://github.com/VitharMe/GBVideoPlayer2
+RUN wget https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-3.4.2-64bit-static.tar.xz && \
+    wget https://github.com/gbdev/rgbds/releases/download/v0.3.7/rgbds-0.3.7.tar.gz
+RUN tar xvf ffmpeg-3.4.2-64bit-static.tar.xz && \
+    cp ffmpeg-3.4.2-64bit-static/ffmpeg /usr/local/bin/
 RUN tar zxvf rgbds-0.3.7.tar.gz && \
     cd rgbds-0.3.7 && \
     make && \
