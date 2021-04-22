@@ -27,11 +27,15 @@ For encoding and building a video ROM, you will need a Make, a C compiler (Clang
 
 ## Install requirements
 ### Debian
-```
+```bash
 apt-get install -y build-essential git flex bison pkg-config wget libpng-dev
+
 wget https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-3.4.2-64bit-static.tar.xz
+
 tar xvf ffmpeg-3.4.2-64bit-static.tar.xz && cp ffmpeg-3.4.2-64bit-static/ffmpeg /usr/local/bin/
+
 wget https://github.com/gbdev/rgbds/releases/download/v0.3.7/rgbds-0.3.7.tar.gz
+
 tar zxvf rgbds-0.3.7.tar.gz && cd rgbds-0.3.7 && make && make install
 ```
 
